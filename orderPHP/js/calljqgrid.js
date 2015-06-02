@@ -36,10 +36,10 @@
 	};
 
 	//受注タブ、列名定義の配列。順番にセットされる。
-	colNamesLists['receivedData'] = ['', '受注日', '受注コード', '顧客名', '納品希望日', '入力者', '受注種別', '承認者', '合計金額'];
+	colNamesLists['receivedData'] = ['受注日', '受注コード', '顧客名', '納品希望日', '入力者', '受注種別', '承認者', '合計金額'];
 
 	//発注タブ、列名定義の配列。順番にセットされる。
-	colNamesLists['sendData'] = ['', '発注日', '発注コード', '発注先', '発送指定日', '入力者', '承認者', '合計金額'];
+	colNamesLists['sendData'] = ['発注日', '発注コード', '発注先', '発送指定日', '入力者', '承認者', '合計金額'];
 
 	//受注、新規・編集画面、列名定義の配列。順番にセットされる。
 	colNamesLists['receivedDataAddEdit'] = ['', '製造番号', '製品種別', '製品名', '販売価格', '個数', '小計', '発送場所', '発送指定日', '納品指定日'];
@@ -59,8 +59,6 @@
 	        //editoptions:セレクトメニューでのセル編集時に、選択項目のソースとなる連想配列を指定する。
 	        //sortable:ソート可能かどうかの設定。 sorttype:ソートのデータ型を指定する。
 
-			//受注チェックボックス列
-			{ name: "received_check", index:"received_check", width: 27, align:"center", className: "received_check", editable: true, sortable:false},
 	        //受注日列。dateTypeを日付型にする。
 	        { name: "order_date", index:"order_date", width: 91, align:"left", className: "order_date", editable: true, sortable:true, sorttype:'date',datefmt:"yyyy-mm-dd",editrules:{date:true}},
 			//受注コード列
@@ -88,8 +86,6 @@
 	        //editoptions:セレクトメニューでのセル編集時に、選択項目のソースとなる連想配列を指定する。
 	        //sortable:ソート可能かどうかの設定。 sorttype:ソートのデータ型を指定する。
 
-	        //発注日チェックボックス列
-	        { name: "send_check", index:"send_check", width: 27, align:"center", className: "send_check", editable: true, sortable:false},
 	        //発注日列。dateTypeを日付型にする。
 	        { name: "order_date", index:"send_date", width: 91, align:"left", className: "send_date", editable: true, sortable:true, sorttype:'date',datefmt:"yyyy-mm-dd",editrules:{date:true}},
 			//発注コード列
@@ -386,6 +382,8 @@
 		gridResize: {minWidth:310, maxWidth:576},
 		//表部分の高さを指定する。
 		height: 280,
+        //@add 2015.0602 T.Masuda チェックボックスを追加 
+        multiselect: true,	//jqGrid側でチェックボックスを用意する
 		//列名の表示の配列をセットする。
 		colNames: colNamesLists['receivedData'],
 		//列定義のデータをセットする。
@@ -437,6 +435,8 @@
 		colNames: colNamesLists['sendData'],
 		//列定義のデータをセットする。
 		colModel: colData['sendData'],
+        //@add 2015.0602 T.Masuda チェックボックスを追加 
+        multiselect: true,	//jqGrid側でチェックボックスを用意する
 		caption: '発注リスト'	,	//リストのタイトルを設定する。
 		cellEdit: false,    	// セルの編集を無効にする。
 		//セルを編集してもサーバとの通信をしないように設定する。

@@ -303,7 +303,7 @@ class JSONDBManager {
 				return true;
 			} 
 		}
-		return false;
+		return false;	//連想配列ではないのでfalseを返す
 	}
 }
 
