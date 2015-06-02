@@ -1,0 +1,41 @@
+[
+    {
+        "received_check":"<input type=\"checkbox\" name=\"sendCheck\" class=\"checkbox\" value=\"sendCheck\">",
+        "productNumber": "00001",
+        "productType": "アク",
+        "productName": "煙突ヒートシールド",
+        "unitPrice": "1,000",
+        "number": "20",
+        "subtotal": "20,000",
+        "customer":"三下哲也",
+        "deliveryPlace": "横須賀",
+        "send_date":"2015/04/03",
+        "delivery_date": "2015/04/05"
+    },
+    {
+        "received_check":"<input type=\"checkbox\" name=\"sendCheck\" class=\"checkbox\" value=\"sendCheck\">",
+        "productNumber": "00002",
+        "productType": "フラ",
+        "productName": "スチールステージプレート",
+        "unitPrice": "40,000",
+        "number": "10",
+        "subtotal": "400,000",
+        "customer":"手島煬帝",
+        "deliveryPlace": "広尾",
+        "send_date":"2015/01/02",
+        "delivery_date": "2015/01/04"
+    },
+    {
+        "received_check":"<input type=\"checkbox\" name=\"sendCheck\" class=\"checkbox\" value=\"sendCheck\">",
+        "productNumber": "00003",
+        "productType": "二管",
+        "productName": "チムニートップ",
+        "unitPrice": "5,000",
+        "number": "30",
+        "subtotal": "150,000",
+        "customer":"中西徹",
+        "deliveryPlace": "日野",
+        "send_date":"2015/03/13",
+        "delivery_date": "2015/03/19"
+    }
+]

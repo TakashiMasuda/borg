@@ -1,0 +1,454 @@
+@charset "utf-8";
+/* タグレイアウト */
+/*
+ * セレクタ:body
+ * 概要  :表示領域全体のタグ
+ * 作成日	：2015.01.12
+　* 作成者	：T.Yamamoto
+ */
+body{
+	/* フォントの設定をする */
+	color: #888;		/* 色を少し薄めにする */
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 90%;		/* 全体的を通常の9割程度のサイズにする */
+	margin: 1% 0;		/* 余白を上下に1%の幅でとる */
+}
+
+/* クリック時の動作についてのスタイルシート */
+/*
+ * セレクタ:*	:focus
+ * 概要		:全ての要素が対象となる。フォーカスが当たったときのレスポンス。
+ * 作成日	：2015.01.12
+ * 作成者	:T.Yamamoto
+ */
+*:focus { 
+	outline:none;	/* 表示される青い枠線を消す */
+}
+
+/*
+ * セレクタ:a
+ * 概要  :リンク要素の領域
+ * 作成日:2015.01.12
+ * 作成者:T.Yamamoto
+ */
+a {
+	text-decoration: none;		/* 下線を消す */
+}
+
+/* テキストボックスについて */
+/*
+ * セレクタ:input
+ * 概要  :入力フォームの要素
+ * 作成日:2015.01.12 
+ * 作成者:T.Yamamoto
+ */
+input{
+	background: #FFF;		/* 灰色になる場合があるので白くする */
+	vertical-align: middle;	/* 高さを親要素の中心に合わせる */
+}
+
+/*
+ * セレクタ:label
+ * 概要  :テキストボックスなどにつけるlabel領域
+ * 作成日:2015.01.12
+ * 作成者:T.Yamamoto
+ */
+label {
+	display: inline-block;		/* インラインブロック要素にして横並びにする */
+}
+
+/*
+ * セレクタ:input, label. button, select
+ * 概要  :コンテンツの高さを設定する
+ * 作成日:2015.01.12
+ * 作成者:T.Yamamoto
+ */
+input, label, button, select {
+	height: 31px;				/* コンテンツの高さを31pxにする */
+}
+
+/*
+ * セレクタ:ul
+ * 概要  :箇条書きの領域
+ * 作成日:2015.01.13
+ * 作成者:T.Yamamoto
+ */
+ul {
+	margin: 0;						/* 余白を0にする */
+	padding: 0;						/* 要素の広がりを0にする */
+}
+
+/*
+ * セレクタ:ul li
+ * 概要  :箇条書きの個々の領域
+ * 作成日:2015.01.13
+ * 作成者:T.Yamamoto
+ */
+ul li {
+	list-style: none;				/* 黒丸をつけない */
+}
+
+/*
+ * セレクタ:button
+ * 概要  :ボタン
+ * 作成日:2015.01.13
+ * 作成者:T.Yamamoto
+ */
+button {
+	color: #555;		/* 色を少し薄めの黒にする */
+}
+
+/*
+ * セレクタ:button:hover
+ * 概要  :ボタンにマウスオーバー時のレイアウト
+ * 作成日:2015.01.13
+ * 作成者:T.Yamamoto
+ */
+button:hover {
+	cursor: pointer;	/* カーソルをリンクのポインターにする */
+	opacity: 0.4; 		/* 要素の透過度を40%にする */
+}
+
+/* グリッドレイアウト */
+/*
+ * セレクタ:.grid1
+ * 概要  :グリッド1つ分のレイアウト
+ * 作成日:2015.01.17
+ * 作成者:T.Yamamoto
+ */
+.grid1 {
+	width	:32px;	/* 1グリッドの幅。 */
+}
+
+/*
+ * セレクタ:.grid2
+ * 概要  :グリッド2つ分のレイアウト
+ * 作成日:2015.01.17
+ * 作成者:T.Yamamoto
+ */
+.grid2 {
+	width	:64px;	/* 2グリッドの幅。 */
+}
+
+/*
+ * セレクタ:.grid3
+ * 概要  :グリッド3個分のレイアウト
+ * 作成日:2015.01.17
+ * 作成者:T.Yamamoto
+ */
+.grid3{
+	width	:96px; /* 3グリッドの幅。 */
+}
+
+/*
+ * セレクタ:.grid5
+ * 概要  :グリッド5個分の幅
+ * 作成日:2015.01.17
+ * 作成者:T.Yamamoto
+ */
+.grid5 {
+	width:160px;	/* 5グリッドの幅。 */
+}
+
+/*
+ * セレクタ:.grid9
+ * 概要  :グリッド9個分のレイアウト
+ * 作成日:2015.01.17
+ * 作成者:T.Yamamoto
+ */
+.grid9{
+	width	:288px; /* 9グリッドの幅。 */
+}
+
+/*
+ * セレクタ:.grid10
+ * 概要  :グリッド10個分のレイアウト
+ * 作成日:2015.01.17
+ * 作成者:T.Yamamoto
+ */
+.grid10{
+	width	:325px; /* 10グリッドの幅。 */
+}
+
+/* 基本レイアウト */
+/*
+ * セレクタ:.main
+ * 概要  :各画面のコンテンツの領域
+ * 作成日:2015.01.12
+ * 作成者:T.Yamamoto
+ */
+.main {
+	margin: 0 auto 0;	/* 画面全体の各マージン */
+	max-height: 1024px;	/* 画面の最大高 */
+	max-width: 788px;	/* 画面幅の最大値 */
+	height: inherit;	/* containerの高さを継承 */
+	width: 100%;		/* 幅の基準パーセンテージ */
+}
+
+/*
+ * セレクタ:.mainContent
+ * 概要  :ヘッダーより下のコンテンツ全体の外枠
+ * 作成日:2015.01.12
+ * 作成者:T.Yamamoto
+ */
+.mainContent {
+	background: #eee;		/* 背景をグレーにする */
+	clear: both;			/* 回り込みを解除する */
+	padding: 10px;			/* 要素の幅を10px広げる */
+}
+
+/* 共通クラスレイアウト */
+/*
+ * セレクタ:.clearfix:after
+ * 概要  :子要素にfloatがあったときに親要素の高さを認識させるためのレイアウト
+ * 作成日:2015.01.19
+ * 作成者:T.Yamamoto
+ */
+.clearfix:after {
+	content: " ";		/* 場所をとらない形で要素を存在させる */
+	clear: both;		/* 回り込み防止する */
+	display: block;		/* 必ずブロックとして扱う */
+	height: 0;			/* 後に存在する要素の高さを0にする */
+	visibility: hidden;	/* 表示しない */
+}
+/*
+ * セレクタ:.left
+ * 概要  :左に回り込みするためのクラス
+ * 作成日:2015.01.19
+ * 作成者:T.Yamamoto
+ */
+.left {
+	float: left;					/* 左側に回り込みする */
+}
+
+/*
+ * セレクタ:.right
+ * 概要  :右側に回り込みするためのクラス
+ * 作成日:2015.01.19
+ * 作成者:T.Yamamoto
+ */
+.right {
+	float: right;					/* 右側に回り込みする */
+}
+
+/*
+ * セレクタ:.clear
+ * 概要  :回り込みをなくすためのクラス
+ * 作成日:2015.01.19
+ * 作成者:T.Yamamoto
+ */
+.clear {
+	padding-top:10px;				/* 上から10px要素の幅を広げる */
+	clear: both;					/* 回り込みをなくす */
+}
+
+/*
+ * セレクタ:.buttonImage:hover
+ * 概要  :画像ボタンにマウスオーバーしたときのスタイル
+ * 作成日:2015.01.19
+ * 作成者:T.Yamamoto
+ */
+.buttonImage:hover {
+	opacity: 0.65;	/* 要素の透過度を65%にする */
+}
+
+/* ヘッダーレイアウト */
+/*
+ * セレクタ:.header
+ * 概要  :ページのヘッダー領域
+ * 作成日:2015.01.12
+ * 作成者:T.Yamamoto
+ */
+.header {
+	margin: 1% 0;			/* 余白を上下に1%とる */
+}
+
+/*
+ * セレクタ:.headerTitle
+ * 概要  :ページのタイトルを囲む領域
+ * 作成日:2015.01.12
+ * 作成者:T.Yamamoto
+ */
+.headerTitle {
+	text-align: center;		/* 中央揃えにする */
+	width: 90%;				/* 幅を80%にする */
+}
+
+/*
+ * セレクタ:header .pageTitle
+ * 概要  :ページのタイトル領域
+ * 作成日:2015.01.12
+ * 作成者:T.Yamamoto
+ */
+.header .pageTitle {
+	margin: 0;				/* 余白を0にしてタグデフォルトの余白をとらせない */
+}
+
+/*
+ * セレクタ:.closeButton
+ * 概要  :閉じるボタンレイアウト
+ * 作成日:2015.01.12
+ * 作成者:T.Yamamoto
+ */
+.closeButton {
+	margin-top: 6px;	/* 上から余白をとる */
+}
+
+/* タブレイアウト */
+/*
+ * セレクタ:.tablist
+ * 概要  :個々のタブを囲む領域
+ * 作成日:2015.01.12
+ * 作成者:T.Yamamoto
+ */
+.tablist {
+	background: #dfdfdf;			/* 背景をグレーにする */
+	display: inline-block;			/* インラインブロック要素にして横並びにする */
+}
+/*
+ * セレクタ:.tab
+ * 概要  :クリックするタブの領域
+ * 作成日:2015.01.13
+ * 作成者:T.Yamamoto
+ */
+.tab {
+	border: 1px solid #999;			/* 黒めの線で要素を囲む */
+	border-bottom:none;				/* 囲い線で下線はなくす */
+	border-top-left-radius: 5px;	/* 要素の左上角を丸くする */
+	border-top-right-radius: 5px;	/* 要素の右上角を丸くする */
+	cursor:pointer;					/* マウスオーバー時にカーソルを指にする */
+	display: block;					/* ブロック要素として指定する */
+	padding: 10px;					/* 要素の幅を10px広げる */
+	position: relative;				/* 相対位置にする */
+	top: 1px;						/* 上から1px位置をずらす */
+}
+
+/*
+ * セレクタ:.tab:hover
+ * 概要  :タブにマウスオーバーしたときのレイアウト
+ * 作成日:2015.01.13
+ * 作成者:T.Yamamoto
+ */
+.tab:hover {
+	text-decoration: underline;		/* 下線を引く */
+}
+
+/*
+ * セレクタ:.tabContent
+ * 概要  :タブの中のコンテンツ全体の外枠
+ * 作成日:2015.01.13
+ * 作成者:T.Yamamoto
+ */
+.tabContent {
+	background: #fff;		/* 背景を白にする */
+	border: 1px solid #999;	/* 少し灰色目の黒い線で要素を囲む */
+	display: none;			/* タブの中身のコンテンツを画面に表示しない */
+	padding: 10px;			/* 要素の幅を10px広げる */
+}
+
+/*
+ * セレクタ:.selected
+ * 概要  :選択中のタブ領域
+ * 作成日:2015.01.13
+ * 作成者:T.Yamamoto
+ */
+.selected {
+	background: #fff;		/* タブの背景を白色にする */
+}
+
+/* 期間領域、受注種別選択領域 */
+/*
+ * セレクタ:.periodarea, .choice
+ * 概要  :期間領域と受注種別選択領域
+ * 作成日:2015.01.14
+ * 作成者:T.Yamamoto
+ */
+.periodarea, .choice {
+	margin-left: 10px;			/* 左から10pxの余白をとる */
+}
+
+/* ボタン領域レイアウト */
+/*
+ * セレクタ:.editButtons
+ * 概要  :編集ボタン領域
+ * 作成日:2015.01.14
+ * 作成者:T.Yamamoto
+ */
+.editButtons {
+	width: 75px;			/* 2グリッド分＋余白の幅 */
+}
+
+/* jqGridレイアウト */
+/*
+ * セレクタ:.list, .ui-jqgrid-labels
+ * 概要  :jqGrid領域
+ * 作成日:2015.01.14
+ * 作成者:T.Yamamoto
+ */
+.list, .ui-jqgrid-labels {
+	font-size:13px;					/* フォントサイズを13pxにする */
+}
+
+/* 新規・編集画面、データ入力レイアウト */
+/*
+ * セレクタ:.dataIn
+ * 概要  :新規・編集画面のデータを入力するラベルとテキストボックスを囲む領域
+ * 作成日:2015.01.14
+ * 作成者:T.Yamamoto
+ */
+.dataIn {
+	display: inline-block;	/* 要素を横並びにするためにインラインブロック要素にする */
+	width: 384px;			/* .mainの半分の幅にする */
+}
+
+/*
+ * セレクタ:.dataLabel
+ * 概要  :新規・編集画面のデータを入力するラベル領域
+ * 作成日:2015.01.14
+ * 作成者:T.Yamamoto
+ */
+.dataLabel {
+	line-height: 32px;				/* テキストボックスと中央揃えにするため、高さを揃える */
+}
+
+/* ダイアログレイアウト */
+/*
+ * セレクタ:.dialogHeader
+ * 概要  :ダイアログのヘッダー領域
+ * 作成日:2015.01.16
+ * 作成者:T.Yamamoto
+ */
+.dialogHeader {
+	margin-bottom:10px;				/* 下向きに10px余白をとる */
+	text-align: right;				/* 右側に回り込みする */
+}
+
+/*
+ * セレクタ:.dialogboxLabel
+ * 概要  :ダイアログ内のtextareaタグにつけるラベルのレイアウト
+ * 作成日:2015.01.16
+ * 作成者:T.Yamamoto
+ */
+.dialogboxLabel {
+	vertical-align: top;			/* レイアウトを要素の上部に表示する */
+}
+
+/*
+ * セレクタ:.dialogTextarea
+ * 概要  :ダイアログ内のtextareaタグレイアウト
+ * 作成日:2015.01.16
+ * 作成者:T.Yamamoto
+ */
+.dialogTextarea {
+	height: 70px;					/* 高さを70pxに設定する */
+}
+
+/*
+ * セレクタ:.dialogboxLabel
+ * 概要  :未在庫ダイアログのレイアウト
+ * 作成日:2015.01.16
+ * 作成者:T.Yamamoto
+ */
+#lessStockDialog {
+	padding: 0;						/* 要素の余白を0にする */
+}

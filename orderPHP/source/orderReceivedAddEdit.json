@@ -1,0 +1,373 @@
+{
+    "header":{
+        "class":"header clearfix",
+        "headerTitle": {
+            "class"    :"headerTitle left",
+            "pageTitle": {
+                "text": "新規・編集画面（伝票）"
+            }
+        },
+        "closeButton": {
+            "type":"image",
+            "src":"css/images/closeButton.png",
+            "class":"closeButton buttonImage grid1 right",
+            "name": "closeButton"
+        }
+    },
+    "mainContent":{
+        "class":"mainContent"
+    },
+    "dataInArea":{
+        "dataIn":[
+            {
+                "text":"受注日"
+            },
+            {
+                "text":"受注コード"
+            },
+            {
+                "text":"顧客名"
+            },
+            {
+                "text":"締日"
+            },
+            {
+                "text":"支払日"
+            },
+            {
+                "text":"入力者"
+            },
+            {
+                "text":"承認者"
+            },
+            {
+                "text":"納品場所"
+            },
+            {
+                "text":"備考(社内向)"
+            },
+            {
+                "text":"備考(社外向)"
+            },
+            {
+                "text":"合計金額"
+            }
+        ]
+    },
+    "buttonArea":{
+        "class":"buttonArea clearfix clear"
+    },
+    "editButtons": {
+        "class"     :"editbuttons left",
+        "buttonLink":
+        [
+            {
+                "href":"",
+                "type":"image",
+                "src":"css/images/addButton.png",
+                "class":"addButton grid1 buttonImage",
+                "name": "addButton",
+                "value":"addButton"
+            },
+            {
+                "type":"image",
+                "src":"css/images/deleteButton.png",
+                "class":"deleteButton grid1 buttonImage",
+                "name": "deleteButton",
+                "value":"deleteButton"
+            }
+        ]
+    },
+    "leftButtonArea":{
+        "class":"leftButtonArea left",
+        "sideButton":[
+            {
+                "class":"returnButton grid1",
+                "name": "returnButton",
+                "value":"返品",
+                "text":"返"
+            },
+            {
+
+                "class":"serialNumberButton grid2",
+                "name": "lessStockButton",
+                "value":"シリアルNo詳細",
+                "text":"シ詳"
+            }
+        ]
+    },
+    "rightButtonArea":{
+        "class":"rightButtonArea right",
+        "sideButton":[
+            {
+                "class":"permit grid1",
+                "name": "permitButton",
+                "value":"承認",
+                "text":"承"
+            },
+            {
+                "class":"changeButton grid1",
+                "name": "changeButton",
+                "value":"変更",
+                "text":"変"
+            }
+        ]
+    },
+    "receivedWrapList": {
+        "id": "receivedWrapList",
+        "class":"wrapList clear",
+        "list": {
+            "id": "receivedDataAddEdit"
+        }
+    },
+    "newDialog":{
+        "id":"newDialog",
+        "class":"dialog",
+        "title":"新規・編集画面(製品項目)"
+    },
+    "newDialogHeader":{
+        "dialogButton":{
+            "class":"okButton",
+            "text":"OK"
+        }
+    },
+    "dialogPulldown4":{
+        "dialogData1":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"製品種別(大)"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"productTypeBig",
+                "selectData":
+                [
+                    "二管",
+                    "一管",
+                    "灯台",
+                    "二支",
+                    "一支",
+                    "アク",
+                    "フラ"
+                ]
+            }
+        },
+        "dialogData2":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"製品種別(中)"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"productTypeMiddle",
+                "selectData":
+                [
+                    "種別1",
+                    "種別2",
+                    "種別3",
+                    "種別4",
+                    "種別5",
+                    "種別6",
+                    "種別7"
+                ]
+            }
+        },
+        "dialogData3":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"製品種別(小)"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"productTypeSmall",
+                "selectData":
+                [
+                    "二管",
+                    "一管",
+                    "灯台",
+                    "二支",
+                    "一支",
+                    "アク",
+                    "フラ"
+                ]
+            }
+        },
+        "dialogData4":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"製品"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"product",
+                "selectData":
+                [
+                    "フラッシング3寸",
+                    "チムニーフラッシング　□650",
+                    "炉台キット2枚組　CB30",
+                    "煙突ヒートシールド",
+                    "スチールステージプレート",
+                    "バーベキュースタンド",
+                    "ストームカラー　ネック付"
+                ]
+            }
+        }
+    },
+    "dialogPulldown":{
+        "dialogData1":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"製品ランク"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"productRank",
+                "selectData":
+                [
+                    "ランクA",
+                    "ランクB",
+                    "ランクC",
+                    "ランクD",
+                    "ランクE",
+                    "ランクF",
+                    "ランクG"
+                ]
+            }
+        },
+        "dialogData2":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"ロットNo"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"lotNumber",
+                "selectData":
+                [
+                    "000001",
+                    "000002",
+                    "000003",
+                    "000004",
+                    "000005",
+                    "000006",
+                    "000007"
+                ]
+            }
+        },
+        "dialogData3":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"シリアルNo"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"serialNumber",
+                "selectData":
+                [
+                    "123-456",
+                    "654-321",
+                    "123-654",
+                    "321-654",
+                    "654-123",
+                    "789-654",
+                    "345-987"
+                ]
+            }
+        },
+        "dialogData4":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"販売価格"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"salePrice",
+                "selectData":
+                [
+                    "0",
+                    "-10,000",
+                    "5,000",
+                    "10,000",
+                    "15,000",
+                    "20,000",
+                    "50,000"
+                ]
+            }
+        }
+    },
+    "dialogTextbox2":{
+        "dialogData1":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"個数"
+            },
+            "dialogTextbox":{
+                "class":"dialogTextbox grid5",
+                "type":"text",
+                "name":"number"
+            }
+        },
+        "dialogData2":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"発送指定日"
+            },
+            "dialogTextbox":{
+                "class":"dialogTextbox grid5",
+                "type":"text",
+                "name":"send_date"
+            }
+        }
+    },
+    "reNewDialogLast":{
+        "dialogData1":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"納品指定日"
+            },
+            "dialogTextbox":{
+                "class":"dialogTextbox grid5",
+                "type":"text",
+                "name":"delivery_date"
+            }
+        },
+        "dialogData2":{
+            "dialogLabel":{
+                "class":"dialogboxLabel grid3",
+                "text":"備考"
+            },
+            "dialogTextbox":{
+                "class":"dialogTextarea grid5",
+                "name":"others"
+            }
+        }
+    },
+    "returnDialog":{
+        "id":"returnDialog",
+        "class":"dialog",
+        "title":"返品編集画面"
+    },
+    "returnDialogContent":{
+        "returnLabel": {
+            "class":"returnLabel grid2",
+            "text":"返品数"
+        },
+        "returnNumber":{
+            "class":"returnNumber grid1",
+            "type":"number",
+            "name":"returnNumber",
+            "value":"1",
+            "max":"5",
+            "min":"1"
+        },
+        "returnText":{
+            "text":"/5個"
+        }
+    },
+    "returnDialogHeader":{
+        "dialogButton":{
+            "class":"okButton",
+            "text":"OK"
+        }
+    }
+}

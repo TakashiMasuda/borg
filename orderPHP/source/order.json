@@ -1,0 +1,244 @@
+{
+    "header": {
+        "class":"header clearfix",
+        "headerTitle": {
+            "class"    :"headerTitle left",
+            "pageTitle": {
+            	"text":"",
+                "db_getQuery": "SELECT url AS pageTitle FROM Url WHERE url_code='1';",
+                "db_column": {"1":""},
+                "db_table": {"Url":""},
+                "modify": "false"
+            }
+        },
+        "closeButton": {
+            "type" :"image",
+            "src"  :"css/images/closeButton.png",
+            "class":"closeButton buttonImage grid1 right",
+            "name" : "closeButton"
+        }
+    },
+    "mainContent":{
+        "class":"mainContent"
+    },
+    "tabArea":{
+        "tabOut":{
+            "summary":{
+                "text":"概要"
+            },
+            "summary_text":{
+                "text":"",
+                "db_getQuery": "SELECT function AS summary_text FROM Resource WHERE resource_code='1';",
+                "db_setQuery": "UPDATE content SET content='' WHERE id='2';",
+                "db_column": "function",
+                "db_table": "Resource",
+                "modify": "false"
+            },
+            "tablist":
+            [
+                {
+                    "class":"tab selected",
+                    "name":"sendTabContent",
+                    "text":"発注"
+                },
+                {
+                    "name":"receivedTabContent",
+                    "text":"受注"
+                }
+            ]
+        },
+        "tabIn":
+        [
+                {
+                    "id":"sendTabContent"
+                },
+                {
+                    "id":"receivedTabContent"
+                }
+        ]
+    },
+    "searcharea": {
+        "db_getQuery": "SELECT od.date AS ordered, od.order_code, og.organization as custom, od.est_delivery_date, p1.person_name AS inputter, ot.order_type, p2.person_name AS submitter, SUM(od.price * od. quantity) AS ammount FROM Order_ddt AS od, Person as p1, Person as p2, Organization as og, Order_Type as ot WHERE od.custom_organization_code = og.organization_code and od.deliver_organization_code = og.organization_code and od.inputter = p1.person_code and od.submitter = p2.person_code and od.order_type_code = ot.order_type_code GROUP BY order_code HAVING organization='searchtextbox';",
+        "db_setQuery": "INSERT INTO ()",
+        "db_column": {"1":""},
+        "db_table": {"1":"Order_ddt AS od", "2":"Organization AS og", "3":"Person As p1" , "3":"Person As p2" , "3":"Order_Type As ot"},
+        "modify": "false",
+        "class":"searcharea left",
+        "searchtext": {
+            "class" :"searchtext grid1",
+            "for"   :"searchList",
+            "text"  :"検索"
+        },
+        "searchtextbox": {
+            "class" :"searchtextbox grid10",
+            "type"  :"text",
+            "name"  :"searchList",
+            "value":"株式会社C"
+        },
+        "searchButton": {
+            "class" :"searchButton grid1 buttonImage",
+            "name"  :"search",
+            "value" :"検索",
+            "type"  :"image",
+            "src"   :"css/images/searchButton.png"
+        }
+    },
+    "periodarea": {
+        "class":"periodarea left",
+        "periodtext": {
+            "class":"periodtext grid1",
+            "for": "filter-list",
+            "text": "期間"
+        },
+        "datestart": {
+            "class": "dateArea",
+            "datebox": {
+                "class" :"datebox grid2",
+                "type"  :"text",
+                "name"  :"startDay",
+                "value" :"13/11/28",
+                "format":"y/㎜/dd"
+            }
+        },
+        "from-to": {
+            "html": "&#12316;"
+        },
+        "dateafter": {
+            "class": "dateArea",
+            "datebox": {
+                "class" :"datebox grid2",
+                "type"  :"text",
+                "name"  :"endDay",
+                "value" :"14/11/28",
+                "format":"y/mm/dd"
+            }
+        }
+    },
+    "choice": {
+        "class":"choice left",
+        "selectLabel": {
+            "class":"selectLabel grid2",
+            "text": "受注種別"
+        },
+        "selectbox": {
+            "class":"selectbox grid2",
+            "name": "receivedType",
+            "selectValue": 
+            [
+                "種別1",
+                "種別2",
+                "種別3",
+                "種別4",
+                "種別5"
+            ]
+        }
+    },
+    "sendButtonList": {
+        "id":"sendButtonList",
+        "class": "buttonList clear"
+    },
+    "receivedButtonlist": {
+        "id":"receivedButtonList",
+        "class": "buttonList clear"
+    },
+    "editButtons": {
+        "class"     :"editbuttons left",
+        "buttonLink":
+        [
+            {
+                "type"  :"image",
+                "src"   :"css/images/addButton.png",
+                "class" :"addButton grid1 buttonImage",
+                "name"  :"addButton",
+                "value" :"addButton"
+            },
+            {
+                "type":"image",
+                "src":"css/images/deleteButton.png",
+                "class":"deleteButton grid1 buttonImage",
+                "name": "deleteButton",
+                "value":"deleteButton"
+            }
+        ]
+    },
+    "sendPDFbutton": {
+        "class":"pdfButton right",
+        "sideButton":
+        [
+            {
+                "class" :"grid1",
+                "name"  :"orderPaper",
+                "value" :"注文書",
+                "text"  :"注"
+            },
+                            {
+                "class" :"grid1",
+                "name"  :"payItem",
+                "value" :"納品書",
+                "text"  :"納"
+            },
+            {
+                "class" :"grid2",
+                "name"  :"orderSend",
+                "value" :"発送指示書",
+                "text"  :"発指"
+            }
+        ]
+    },
+    "receivedPDFbutton": {
+            "class":"pdfButton right",
+        "sideButton":
+        [
+            {
+                "class" :"grid1",
+                "name"  :"estimate",
+                "value" :"見積書",
+                "text"  :"見"
+            },
+                            {
+                "class" :"grid1",
+                "name"  :"orderPaper",
+                "value" :"注文書",
+                "text"  :"注"
+            },
+                            {
+                "class" :"grid2",
+                "name"  :"orderBill",
+                "value" :"注文請書",
+                "text"  :"注請"
+            },
+                            {
+                "class" :"grid1",
+                "name"  :"payItem",
+                "value" :"納品書",
+                "text"  :"納"
+            },
+                            {
+                "class" :"grid1",
+                "name"  :"billPaper",
+                "value" :"請求書",
+                "text"  :"請"
+            },
+                            {
+                "class" :"grid2",
+                "name"  :"sendOrder",
+                "value" :"発送指示書",
+                "text"  :"発指"
+            }
+        ]
+    },
+    "receivedWrapList": {
+        "id": "receivedWrapList",
+        "class":"wrapList clear",
+        "list": {
+            "id": "receivedData"
+        }
+    },
+    "sendWrapList": {
+        "id": "sendWrapList",
+        "class":"wrapList clear",
+        "list": {
+            "id": "sendData"
+        }
+    }
+}

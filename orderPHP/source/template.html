@@ -1,0 +1,198 @@
+<html>
+<body>
+<div>
+	<!-- 見出し部を開始 -->
+	<div class="header">
+		<!-- ヘッダーのタイトル部分 -->
+		<div class="headerTitle">
+			<!-- このページの要旨 -->
+			<h1 class="pageTitle"></h1 >
+			<!-- ヘッダーのタイトル部分を閉じる -->
+		</div><!-- ヘッダーのボタン群 -->
+		<!-- 閉じるボタン -->
+		<input type="" src="" class="closeButton" value="" name="">
+	</div><!-- ヘッダー部分を終える -->
+
+	<!-- 空白のdiv。要素を囲みたいときに使う -->
+	<div id="" class="insertdiv" title=""></div>
+
+	<!-- タブ領域 -->
+	<div class="tabArea">
+		<!-- タブの外側(クリックするタブの部分) -->
+		<ul class="tabOut">
+			<p class="summary"></p>
+			<p class="summary_text"></p>
+			<!-- 個々のタブ領域 -->
+			<li class="tablist">
+				<!-- クリックするタブ領域 -->
+				<a name="" class="tab"></a>
+			</li>
+		</ul>
+		<!-- タブのコンテンツ領域の外枠 -->
+		<div class="tabIn">
+			<!-- タブのコンテンツ領域 -->
+			<div id="" class="tabContent"></div>
+		</div>
+	</div>
+
+	<!-- 検索機能 -->
+	<div class="searcharea">
+		<!-- ラベル -->
+		<label class="searchtext" for=""></label>
+		<!-- テキストボックス -->
+		<input type="" class="searchtextbox" name="">
+		<!-- 検索ボタン -->
+		<input type="" src="" name="" class="searchbutton" value="">
+	</div>
+
+	<!-- 期間を指定してのレコード絞り込み機能 -->
+	<div class="periodarea">
+		<!-- ラベル -->
+		<label class="periodtext" for=""></label>
+		<!-- 開始日付選択のテキストボックスの外枠 -->
+		<span class="datestart">
+			<!-- 開始日付選択のテキストボックス。クリックすることでカレンダーが表示される -->
+			<input type="" class="datebox" name="" value="" format="">
+		</span>
+		<!-- 〜のラベル -->
+		<label class="from-to"></label>
+		<!-- 終了日付選択のテキストボックスの外枠 -->
+		<span class="dateafter">
+			<!-- 終了日付選択のテキストボックス。クリックすることでカレンダーが表示される -->
+			<input type="" class="datebox" name="" value="" format="">
+		</span>
+	</div>
+
+	<!-- 絞り込みセレクトボックス -->
+	<div class="choice">
+		<!-- セレクトボックスのラベル -->
+		<label class="selectLabel"></label>
+		<!-- セレクトボックス -->
+		<select class="selectbox" name="">
+			<!-- セレクトボックスの値 -->
+			<option class="selectValue" value=""></option>
+		</select>
+	</div>
+
+	<!-- リスト編集ボタン群 -->
+	<div class="editButtons">
+		<!-- 登録ボタン -->
+		<a class="buttonLink">
+			<input type="" src="" name="" class="addButton">
+		</a>
+	</div>
+
+	<!-- 左右のボタン領域 -->
+	<div class="sideButtonArea">
+		<!-- ボタンを囲む領域 -->
+		<span class="sideButton">
+			<!-- ボタン領域 -->
+			<button class="" name="" value=""></button>
+		</span>
+	</div>
+
+	<!-- リストを囲んでレイアウト崩れを防止するためのタグ -->
+	<div id="" class="wrapList">
+		<!-- JQ Gridによりリストを形成するtableタグ -->
+		<table id="" class="list"></table>
+	</div>
+
+	<!-- 新規・編集画面のラベルとテキストボックスエリア -->
+	<div class="dataInArea">
+		<!-- 新規・編集画面のデータ(ラベルとテキストボックス)を囲むdiv -->
+		<div class="dataIn">
+			<!-- テキストボックスのラベル領域 -->
+			<label class="dataLabel grid3 left"></label>
+			<!-- テキストボックス領域 -->
+			<input class="databox grid9" type="text" name="">
+		</div>
+	</div>
+
+	<!-- ダイアログのヘッダー -->
+	<div class="dialogHeader">
+		<!-- ダイアログに表示されるボタン -->
+		<button class="dialogButton"></button>
+	</div>
+
+	<!-- ダイアログのプルダウンが4連続のときの領域 -->
+	<div class="dialogPulldown4">
+		<!-- ダイアログでデータを入力する領域 -->
+		<div class="dialogData1">
+			<!-- ラベル領域 -->
+			<label class="dialogLabel"></label>
+			<!-- プルダウンメニュー領域 -->
+			<select class="dialogSelect" name="">
+				<option value="" class="selectData"></option>
+			</select>
+		</div>
+		<div class="dialogData2">
+			<label class="dialogLabel"></label>
+			<select class="dialogSelect" name="">
+				<option value="" class="selectData"></option>
+			</select>
+		</div>
+		<div class="dialogData3">
+			<label class="dialogLabel"></label>
+			<select class="dialogSelect" name="">
+				<option value="" class="selectData"></option>
+			</select>
+		</div>
+		<div class="dialogData4">
+			<label class="dialogLabel"></label>
+			<select class="dialogSelect" name="">
+				<option value="" class="selectData"></option>
+			</select>
+		</div>
+	</div>
+
+	<!-- ダイアログのテキストボックスが2連続の領域 -->
+	<div class="dialogTextbox2">
+		<div class="dialogData1">
+			<label class="dialogLabel"></label>
+			<input class="dialogTextbox" type="" name="">
+		</div>
+		<div class="dialogData2">
+			<label class="dialogLabel"></label>
+			<input class="dialogTextbox" type="" name="">
+		</div>
+	</div>
+
+	<!-- 発注、追加ダイアログの最後の2つのコンテンツの領域 -->
+	<div class="newDialogLast">
+		<div class="dialogData1">
+			<label class="dialogLabel grid3"></label>
+			<select class="dialogSelect grid5" name="">
+				<option value="" class="selectData"></option>
+			</select>
+		</div>
+		<div class="dialogData2">
+			<label class="dialogLabel grid3"></label>
+			<input class="dialogTextbox" type="" name="" value="">
+		</div>
+	</div>
+
+	<!-- 発注、追加ダイアログの最後の2つのコンテンツの領域 -->
+	<div class="reNewDialogLast">
+		<div class="dialogData1">
+			<label class="dialogLabel grid3"></label>
+			<input class="dialogTextbox" type="" name="">
+		</div>
+		<div class="dialogData2">
+			<label class="dialogLabel grid3"></label>
+			<textarea class="dialogTextbox" name=""></textarea>
+		</div>
+	</div>
+
+	<!-- 返品編集画面ダイアログのコンテント -->
+	<div class="returnDialogContent">
+		<!-- 「返品数」と表示するラべル -->
+		<label class="returnLabel"></label>
+		<!-- 返品数を入力するテキストボックス -->
+		<input class="returnNumber" type="" name="" value="" max="" min="">
+		<!-- 「/5個」と表示する領域 -->
+		<span class="returnText"></span>
+	</div>
+
+</div>
+</body>
+</html>

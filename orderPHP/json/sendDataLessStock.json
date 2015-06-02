@@ -1,0 +1,32 @@
+[
+    {
+        "stock_check":"<input type=\"checkbox\" name=\"sendCheck\" class=\"checkbox\" value=\"sendCheck\">",
+        "order_date": "2014/08/10",
+        "order_code": "00001",
+        "productNumber": "00001",
+        "productType": "灯台",
+        "productName": "フラッシング3寸",
+        "customer":"高橋未海",
+        "scribedby": "田中太郎"
+    },
+    {
+        "stock_check":"<input type=\"checkbox\" name=\"sendCheck\" class=\"checkbox\" value=\"sendCheck\">",
+        "order_date": "2014/10/10",
+        "order_code": "00002",
+        "productNumber": "00002",
+        "productType": "一管",
+        "productName": "灯台キット2枚組",
+        "customer":"山上円",
+        "scribedby": "中田次郎"
+    },
+    {
+        "stock_check":"<input type=\"checkbox\" name=\"sendCheck\" class=\"checkbox\" value=\"sendCheck\">",
+        "order_date": "2015/01/10",
+        "order_code": "00003",
+        "productNumber": "00003",
+        "productType": "二管",
+        "productName": "断熱二重直管120mm",
+        "customer":"二宮隆",
+        "scribedby": "山田一郎"
+    }
+]

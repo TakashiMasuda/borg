@@ -1,0 +1,298 @@
+{
+    "header":{
+        "class":"header clearfix",
+        "headerTitle": {
+            "class"    :"headerTitle left",
+            "pageTitle": {
+                "text": "新規・編集画面（伝票）"
+            }
+        },
+        "closeButton": {
+            "type":"image",
+            "src":"css/images/closeButton.png",
+            "class":"closeButton buttonImage grid1 right",
+            "name": "closeButton"
+        }
+    },
+    "mainContent":{
+        "class":"mainContent"
+    },
+    "dataInArea":{
+        "dataIn":[
+            {
+                "type":"text",
+                "name":"order_date",
+                "text":"発注日"
+            },
+            {
+                "text":"発注コード",
+                "type":"text",
+                "name":"order_code"
+            },
+                        {
+                "text":"発注先",
+                "type":"text",
+                "name":"send_place"
+            },
+                        {
+                "text":"発送指定日",
+                "type":"text",
+                "name":"delivery_date"
+            },
+                        {
+                "text":"納品指定日",
+                "type":"text",
+                "name":"fixedDate"
+            },
+                        {
+                "text":"入力者",
+                "type":"text",
+                "name":"scribedby"
+            },
+                        {
+                "text":"承認者",
+                "type":"text",
+                "name":"permiter"
+            },
+                        {
+                "text":"備考",
+                "type":"text",
+                "name":"others"
+            },
+            {
+                "text":"合計金額",
+                "type":"text",
+                "name":"amount"
+            }
+        ]
+    },
+    "buttonArea":{
+        "class":"buttonArea clearfix clear"
+    },
+    "editButtons": {
+        "class"     :"editbuttons left",
+        "buttonLink":
+        [
+            {
+                "type":"image",
+                "src":"css/images/addButton.png",
+                "class":"addButton grid1 buttonImage",
+                "name": "addButton",
+                "value":"addButton"
+            },
+            {
+                "type":"image",
+                "src":"css/images/deleteButton.png",
+                "class":"deleteButton grid1 buttonImage",
+                "name": "deleteButton",
+                "value":"deleteButton"
+            }
+        ]
+    },
+    "leftButtonArea":{
+        "class":"leftButtonArea left",
+        "sideButton":[
+            {
+                "class":"lessStockButton grid2",
+                "name": "lessStockButton",
+                "value":"未在",
+                "text":"未在"
+            },
+            {
+                "class":"returnButton grid1",
+                "name": "returnButton",
+                "value":"返品",
+                "text":"返"
+            }
+        ]
+    },
+    "rightButtonArea":{
+        "class":"rightButtonArea right",
+        "sideButton":[
+            {
+                "class":"permit grid1",
+                "name": "permitButton",
+                "value":"承認",
+                "text":"承"
+            },
+            {
+                "class":"changeButton grid1",
+                "name": "changeButton",
+                "value":"変更",
+                "text":"変"
+            }
+        ]
+    },
+    "sendWrapList": {
+        "id": "sendWrapList",
+        "class":"sendWrapList clear",
+        "list": {
+            "id": "sendDataAddEdit"
+        }
+    },
+    "newDialog":{
+        "id":"newDialog",
+        "class":"dialog",
+        "title":"新規・編集画面(製品項目)"
+    },
+    "newDialogHeader":{
+        "dialogButton":{
+            "class":"okButton",
+            "text":"OK"
+        }
+    },
+    "dialogPulldown4":{
+        "dialogData1":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"製品種別(大)"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"productTypeBig",
+                "selectData":
+                [
+                    "二管",
+                    "一管",
+                    "灯台",
+                    "二支",
+                    "一支",
+                    "アク",
+                    "フラ"
+                ]
+            }
+        },
+        "dialogData2":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"製品種別(中)"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"productTypeMiddle",
+                "selectData":
+                [
+                    "種別1",
+                    "種別2",
+                    "種別3",
+                    "種別4",
+                    "種別5",
+                    "種別6",
+                    "種別7"
+                ]
+            }
+        },
+        "dialogData3":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"製品種別(小)"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"productTypeSmall",
+                "selectData":
+                [
+                    "二管",
+                    "一管",
+                    "灯台",
+                    "二支",
+                    "一支",
+                    "アク",
+                    "フラ"
+                ]
+            }
+        },
+        "dialogData4":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"製品"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"product",
+                "selectData":
+                [
+                    "フラッシング3寸",
+                    "チムニーフラッシング　□650",
+                    "炉台キット2枚組　CB30",
+                    "煙突ヒートシールド",
+                    "スチールステージプレート　角",
+                    "バーベキュースタンド",
+                    "ストームカラー　ネック付"
+                ]
+            }
+        }
+    },
+    "dialogTextbox2":{
+        "dialogData1":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"仕入価格"
+            },
+            "dialogTextbox":{
+                "class":"dialogTextbox grid5",
+                "type":"text",
+                "name":"cost"
+            }
+        },
+        "dialogData2":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"個数"
+            },
+            "dialogTextbox":{
+                "class":"dialogTextbox grid5",
+                "type":"text",
+                "name":"number"
+            }
+        }
+    },
+    "newDialogLast":{
+        "dialogData1":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"顧客名"
+            },
+            "dialogSelect":{
+                "class":"dialogSelect grid5",
+                "name":"customer",
+                "selectData":
+                [
+                    "木村隆",
+                    "佐藤祐作",
+                    "山田太郎"
+                ]
+            }
+        },
+        "dialogData2":{
+            "dialogLabel":{
+                "class":"dialogLabel grid3",
+                "text":"発送先"
+            },
+            "dialogTextbox":{
+                "class":"dialogTextbox grid5",
+                "type":"text",
+                "name":"delivery_place",
+                "value":"相模原"
+            }
+        }
+    },
+    "lessStockDialog":{
+        "id":"lessStockDialog",
+        "class":"dialog",
+        "title":"未在庫一覧"
+    },
+    "lessStockWrapList": {
+        "id": "lessStockWrapList",
+        "class":"lessStockWrapList clear",
+        "list": {
+            "id": "sendDataLessStock"
+        }
+    },
+    "lessStockDialogHeader":{
+        "dialogButton":{
+            "class":"okButton",
+            "text":"追加"
+        }
+    }
+}

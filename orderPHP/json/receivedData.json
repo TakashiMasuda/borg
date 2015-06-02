@@ -1,0 +1,19 @@
+{
+    "jqgrid_post": {
+        "order": {
+			"content":{
+            "db_getQuery": "SELECT od.date AS order_date, od.order_code, og.organization as customer, od.delivery_date, p1.person_name AS scribedby, ot.order_type, p2.person_name AS permiter, SUM(od.price * od. quantity) AS amount FROM Order_ddt AS od, Person as p1, Person as p2, Organization as og, Order_Type as ot WHERE od.custom_organization_code = og.organization_code and od.deliver_organization_code = og.organization_code and od.inputter = p1.person_code and od.submitter = p2.person_code and od.order_type_code = ot.order_type_code AND od.date >='from_date' AND od.date <= 'to_date' GROUP BY order_code;",
+            "db_setQuery": "UPDATE CONTENT SET content='' WHERE id='2';",
+            "db_column": "",
+            "db_table": "",
+            "modify": "false",
+	        "from_date": {
+	            "value":"2015-05-01"
+     		},
+	        "to_date": {
+	            "value":"2015-05-30"
+     		}
+     	}
+     	}
+    }
+}

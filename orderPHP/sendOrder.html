@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- viewportの設定により、端末の幅を初期解像度とする -->
+		<meta name="viewport" content="width=device-width">
+		<!-- タイトル -->
+		<title>新規・編集(伝票)</title>
+		<!-- CSSファイルを読み込む -->
+		<!-- 全体に必要なスタイルシートを読み込む。 -->
+		<link rel="stylesheet" type="text/css" href="css/order.css">
+		<!-- jQuery UIのCSSを読み込む。 -->
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.9.2.custom.min.css">
+		<!-- jqGridのCSSを読み込む。 -->
+		<link rel="stylesheet" type="text/css" href="css/ui.jqgrid.css">
+		
+		<!-- JSファイルを読み込む -->
+		<!-- jQueryの本体を読み込む -->
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<!-- 多機能ライブラリ jQuery UIを読み込む -->
+		<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+		<!-- タグを作成するJSの関数群を読み込む -->
+		<script type="text/javascript" src="js/createTag.js"></script>
+		<!-- jqGridでテーブルを作る -->
+		<script type="text/javascript" src="js/jquery.jqGrid.src.js"></script>
+		<!--jqgridの設定jsを読み込む -->
+		<script type="text/javascript" src="js/calljqgrid.js"></script>
+		<!--タブの色を選択されたら変えるjsを読み込む -->
+		<script type="text/javascript" src="js/function.js"></script>
+	</head>
+	<body>
+		<!-- ウィンドウサイズを取得しそれに幅を合わせる -->
+		<div id="container">
+			<!-- 後に呼ばれる各ページと同じく、main以下をpageで囲む -->
+			<div class="page">
+				<!-- コンテンツ領域となるdivタグmain -->
+				<div class="main"></div>
+			</div>
+		</div>
+		<!-- JavaScriptのコードを記述 -->
+		<script type='text/javascript'>
+		//読み込み後
+		$(document).ready(function(){
+			// dom要素を作るためのクラスをインスタンス化する
+			creator = new createTag();
+			// domに配置するデータを取得する
+			creator.getJsonFile('source/orderSendAddEdit.json');
+			// 画面に配置するdomを取得する
+			creator.getDomFile('source/template.html');
+
+			// ヘッダーを作る
+			creator.outputTag('header', 'header', '.main');
+			// コンテンツの外枠を作る
+			creator.outputTag('mainContent', 'insertdiv', '.main');
+			// テキストボックスに発注データを入力する領域を作る
+			creator.outputTag('dataInArea', 'dataInArea', '.mainContent');
+			// コンテンツのボタン領域外枠を作る
+			creator.outputTag('buttonArea', 'insertdiv', '.mainContent');
+			// 新規追加ボタンと削除ボタンの領域を作る
+			creator.outputTag('editButtons', 'editButtons', '.buttonArea');
+			// 画面の左側ボタンを追加する
+			creator.outputTag('leftButtonArea', 'sideButtonArea', '.buttonArea');
+			// 画面の右側ボタンを追加する
+			creator.outputTag('rightButtonArea', 'sideButtonArea', '.buttonArea');
+			// 新規・編集テーブル領域を作る
+			creator.outputTag('sendWrapList', 'wrapList', '.mainContent');
+			// 発注の新規・編集画面テーブルを作る
+			makeGrid('sendDataAddEdit');
+
+			// 新規追加ダイアログの外枠を作る
+			creator.outputTag('newDialog', 'insertdiv', '.main');
+			// 追加ダイアログのヘッダー領域を作る
+			creator.outputTag('newDialogHeader', 'dialogHeader', '#newDialog');
+			// 追加ダイアログの1つ目(4連続プルダウン)のデータ入力領域を作る
+			creator.outputTag('dialogPulldown4', 'dialogPulldown4', '#newDialog');
+			// 追加ダイアログの2つ目(2連続テキストボックス)のデータ入力領域を作る
+			creator.outputTag('dialogTextbox2', 'dialogTextbox2', '#newDialog');
+			// 追加ダイアログの3つ目(最後のコンテンツ)のデータ入力領域を作る
+			creator.outputTag('newDialogLast', 'newDialogLast', '#newDialog');
+			// ダイアログを作る
+			createDialog('#newDialog', '.addButton')
+
+			// 未在庫ダイアログの外枠を作る
+			creator.outputTag('lessStockDialog', 'insertdiv', '.main');
+			// 未在庫ダイアログのヘッダー領域を作る
+			creator.outputTag('lessStockDialogHeader', 'dialogHeader', '#lessStockDialog');
+			// 未在庫テーブルの外枠を作る
+			creator.outputTag('lessStockWrapList', 'wrapList', '#lessStockDialog');
+			// 未在庫テーブルを作る
+			makeGrid('sendDataLessStock');
+			// 未在庫ダイアログを作る
+			createDialog('#lessStockDialog', '.lessStockButton');
+			// optionタグのvalue属性に値を入れる
+			setOptionValue();
+			// テキストボックスのname属性に値を入れる
+			setName(sendAddEdit);
+
+			$('#lessStockDialog').scroll(function(e) {
+				console.log(e.pageX);
+			})
+		});
+
+		//JavaScriptのコード記述を終える
+		</script>
+	</body>
+</html>
