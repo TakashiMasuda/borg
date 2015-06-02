@@ -22,7 +22,7 @@ try {
 }
 
 // 連想配列をjsonに変換して変数に入れる
-$jsonOut = json_encode($jdbm->json);
+$jsonOut = json_encode($jdbm->json, JSON_UNESCAPED_UNICODE);
 // 作成したJSON文字列を出力する。
 print($jsonOut);
 

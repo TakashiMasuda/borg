@@ -5,7 +5,7 @@ require_once("JSONDBManager.php");
 // クライアントから送信されたJSONのキーとJSON文字列を取得する。
 $json = $_POST["json"];
 // 返却するJSON配列の文字列を格納する変数を用意する
-$retArrayString = array();
+$retArrayString = "";
 
 //JSONDBManagerのインスタンスを生成する
 $jdbm = new JSONDBManager();
@@ -19,11 +19,11 @@ try {
 	//JSON文字列を解析して、jdbmのメンバに格納する
 	$jdbm->getJSONMap($json);
 	//取得したJSON連想配列を走査する
-	foreach($json as $keyString => $value) {
+	foreach($jdbm->json as $keyString => $value) {
 		//キーの値がオブジェクトであれば
 		if(is_Array($value)){
 			//レコードのJSONを作る
-			$retArrayString += $jdbm->getListJSON($value);
+			$retArrayString .= $jdbm->getListJSON($value);
 		}
 	}
 	//SQL例外のcatchブロック
@@ -35,7 +35,7 @@ try {
 }
 
 // 作成した連想配列をjson形式にして変数に入れる
-$jsonOut = json_encode($retArrayString, true);
+$jsonOut = json_encode($retArrayString, JSON_UNESCAPED_UNICODE);
 //作成したJSON文字列を出力する。
 print($jsonOut);
 

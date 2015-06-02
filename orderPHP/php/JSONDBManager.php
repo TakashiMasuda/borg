@@ -176,18 +176,16 @@ class JSONDBManager {
 		$strAll = "";
 		$strBlock = "";
 		$strLine = "";
-		// fig1 データベースから当該レコード群を取得する
+		// fig1 データベースから当該レコード群を取得する(結果セットを取得する)
 		$rs = $this->executeQuery($json, DB_GETQUERY);
 		// 結果セットのレコード数を取得する
-		$rCount = $rs->rowCount();
-		// 結果セットを取得する
-		$rsm = $rs->fetchAll(PDO::FERCH_ASSOC);
+		$rCount = $this->processedRecords;
 		// 結果セットの行についてのループ
-		for($iLoop=0; $iLoop<$rCount; $iLoop++) {
+		for($iLoop = 0; $iLoop < $rCount; $iLoop++) {
 			// レコードの文字列を初期化する
 			$strLine = "";
 			// 列についてのループ
-			foreach($rsm[$iLoop] as $key => $value) {
+			foreach($rs[$iLoop] as $key => $value) {
 				// 列名を取得する
 				$sColName = $key;
 				// 文字列の行単位の変数が空でなければ
