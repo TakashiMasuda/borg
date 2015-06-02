@@ -54,11 +54,11 @@ class JSONDBManager {
 	* 作成者:T.Yamamoto
 	* 作成日:2015.
 	*/
-	function createJSON($json, $key, $dbrt_parent) {
+	function createJSON(&$json, $key, $dbrt_parent) {
 		// DBの結果から構築したツリーを構成するクラスのインスタンスを生成する
 		$db_resultTree = new DB_ResultTree();
 		// ステートメントを作成する
-		$rs = $this->executeQuery($json, DB_GETQUERY);
+		$db_resultTree->db_result = $this->executeQuery($json, DB_GETQUERY);
 		// DB_ResultTreeの親子関係を構築する
 		$db_resultTree->parent = $dbrt_parent;
 		// fig2 db_resultTreeから”key”に該当するデータを取得する
@@ -70,11 +70,10 @@ class JSONDBManager {
 				// fig0 再帰的にcreateJSONメソッドをコールする
 				$this->createJSON($value, $keyString, $db_resultTree);
 				// columnがnullでなく、jsonの子のキーがtextかhtml、srcであれば
-			} else if($column != null && $keyString == KEY_TEXT || $keyString == KEY_HTML || $keyString == KEY_SRC) {
-				$value = $column;	//該当するキーの値をcolumnで上書きする
+			} else if($column != null && ($keyString == KEY_TEXT || $keyString == KEY_HTML || $keyString == KEY_SRC)) {
+				$json[$keyString] = $column;	//該当するキーの値をcolumnで上書きする
 			}
 		}
-		var_dump($rs);
 	}
 
 	/*
