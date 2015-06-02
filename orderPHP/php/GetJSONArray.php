@@ -21,7 +21,7 @@ try {
 	//取得したJSON連想配列を走査する
 	foreach($jdbm->json as $keyString => $value) {
 		//キーの値がオブジェクトであれば
-		if(is_Array($value)){
+		if($jdbm->is_hash($value)){
 			//レコードのJSONを作る
 			$retArrayString .= $jdbm->getListJSON($value);
 		}

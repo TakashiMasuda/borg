@@ -1,5 +1,8 @@
 <?php
 
+// JSONDBManagerクラスファイルを読み込む
+require_once("JSONDBManager.php");
+
 //クライアントから送信されたJSON文字列を取得する。
 $json = $_POST["json"];
 
@@ -40,7 +43,7 @@ try {
 //クライアントへ返すメッセージを作成する。
 $returnMessage = "{\"message\":\"" . $jdbm->processedRecords . "件のレコードを操作しました。\"}";
 // 送信する文字列をjson形式に変換して変数に入れる
-$jsonOut = json_encode($returnMessage);
+$jsonOut = json_encode($returnMessage, JSON_UNESCAPED_UNICODE);
 
 // 作成したJson文字列を出力する
 print($jsonOut);
