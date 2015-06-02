@@ -114,7 +114,7 @@ class JSONDBManager {
 				// クエリを実行する
 				$stmt->execute();
 				//クエリを実行して更新処理を行う。処理を行ったレコード数を返してメンバに保存する
-				$processedRecords = $stmt->rowCount();
+				$this->processedRecords = $stmt->rowCount();
 				// 結果セットを返す
 				$retRS = $stmt->fetchALL(PDO::FETCH_ASSOC);  //結果セット
 			}
@@ -188,7 +188,7 @@ class JSONDBManager {
 					$strLine .= ",";
 				}
 				//1列分のデータを文字列に追加する
-				$strLine .= "\"" . $sColName . "\":\"" . $value . "\"";
+				$strLine .= '"' . $sColName  . '":"' . $value . '"' ;
 			}
 			//行に文字列が入っていたら、カンマで区切る
 			$strBlock .= $strBlock != "" ? "," : "";
