@@ -34,8 +34,6 @@ try {
 	exit;
 }
 
-// 作成した連想配列をjson形式にして変数に入れる
-$jsonOut = json_encode($retArrayString, JSON_UNESCAPED_UNICODE);
 //作成したJSON文字列を出力する。
-print($jsonOut);
+print($retArrayString);
 
